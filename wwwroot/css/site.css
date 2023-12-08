@@ -1,0 +1,80 @@
+html {
+    font-size: 14px;
+    border: 0px;
+    margin: 0px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+        border: 0px;
+        margin: 0px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    border: 0px;
+    margin: 0px;
+    font-family:'Franklin Gothic';
+}
+.footer {
+    background-color: #94BFDE;
+}
+
+.logo {
+    height: 65px;
+    width: 50px;
+}
+
+.navbar {
+    background-color: #94BFDE !important;
+}
+.btn-primary {
+    background-color: #94BFDE !important;
+    text-decoration: none;
+    border: 0.5px solid blue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-deletar {
+    background-color: #D80F00 !important;
+    color: white;
+    text-decoration: none;
+    border: 0.5px solid blue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-editar {
+    background-color: #576A78 !important;
+    color: white;
+    text-decoration: none;
+    border: 0.5px solid blue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-detalhes {
+    background-color: #95A2AB !important;
+    color: white;
+    text-decoration: none;
+    border: 0.5px solid blue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.navbar a {
+    color:white !important;
+}
+.display-4 {
+    color: #94BFDE;
+}

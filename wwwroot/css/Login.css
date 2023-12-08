@@ -1,0 +1,48 @@
+﻿.caixaprincipal {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 370px;
+    height: 420px;
+    background-color: #94BFDE !important;
+    border-radius: 5px;
+    padding: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.input-field input {
+    width: 100%;
+    height: 50px;
+}
+
+.input-field label {
+    font-weight: bold;
+    display: block;
+    text-align: left !important;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.input-email {
+    width: 500px;
+    padding: 0px 15px;
+    border-radius: 6px 0px 0px 6px;
+}
+
+.btn-big {
+    font-weight: bold;
+    width: 250px;
+    border-radius: 0px 6px 6px 0px;
+    color: black;
+    background-color: white;
+    margin-top: -10px;
+}
+.img {
+    width: 170px;
+    height: 150px;
+    margin-left: 27%;
+}

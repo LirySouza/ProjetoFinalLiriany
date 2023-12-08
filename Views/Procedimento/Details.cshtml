@@ -1,0 +1,36 @@
+﻿@model ProjetoFinalLiriany.Models.Procedimento
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Procedimento</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProcedimentoNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProcedimentoNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProcedimentoObservacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProcedimentoObservacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoProcedimento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoProcedimento.TipoProcedimentoId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ProcedimentoId" class=" btn btn-primary">Editar</a> |
+    <a asp-action="Index" class=" btn btn-primary">Voltar à Lista</a>
+</div>

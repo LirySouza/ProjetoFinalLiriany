@@ -1,0 +1,30 @@
+﻿@model ProjetoFinalLiriany.Models.LocalRealizacao
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Local Realizacao</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LocalRealizacaoNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LocalRealizacaoNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cidade.CidadeNome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.LocalRealizacaoId" class=" btn btn-primary">Editar</a> |
+    <a asp-action="Index" class=" btn btn-primary">Voltar à Lista</a>
+</div>

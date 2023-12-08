@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ProjetoFinalLiriany.Models.ProcedimentoRealizacao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Realização do Procedimento</h1>
+
+<p>
+    <a asp-action="Create" class=" btn btn-primary">Cadastrar Novo</a>
+</p>
+    <div>
+        @using (Html.BeginForm("Index", "ProcedimentoRealizacao", FormMethod.Get))
+        {
+            <p>
+                Digite aqui sua pesquisa: @Html.TextBox("pesquisa")
+                <input type="submit" value="Pesquisar" />
+            </p>
+        }
+    </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Procedimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colaborador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalRealizacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataRealizacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObservacaoRealizacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.ClienteNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Procedimento.ProcedimentoNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colaborador.ColaboradorNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalRealizacao.LocalRealizacaoNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataRealizacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObservacaoRealizacao)
+            </td>
+            <td>
+                   <a asp-action="Edit" asp-route-id="@item.ProcedimentoRealizacaoId" class=" btn btn-primary">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProcedimentoRealizacaoId" class=" btn btn-primary">Detalhes</a> |
+                    <a asp-action="Imprimir" asp-route-id="@item.ProcedimentoRealizacaoId" class=" btn btn-primary" target="_blank">Imprimir</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProcedimentoRealizacaoId" class=" btn btn-secondary">Deletar</a> 
+                    
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

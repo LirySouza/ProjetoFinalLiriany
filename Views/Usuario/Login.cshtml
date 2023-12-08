@@ -1,0 +1,26 @@
+﻿@model ProjetoFinalLiriany.Models.Usuario
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+<div class="caixaprincipal">
+    <img class="img" src="~/img/NovaLogo.jpg" />
+    <form asp-action="Login">
+        <div class="input-field">
+            <label asp-for="UsuarioEmail"></label>
+            <input class="input-email" asp-for="UsuarioEmail"/>
+            <span asp-validation-for="UsuarioEmail"></span>
+        </div>
+        <div class="input-field">
+            <label asp-for="UsuarioSenha"></label>
+            <input class="input-email" asp-for="UsuarioSenha" type="password" />
+            <span asp-validation-for="UsuarioSenha"></span>
+        </div>
+        <br/>
+        <h4>@ViewBag.Mensagem</h4>
+        <br />
+        <div class="input-field">
+            <input class="btn-big" type="submit" value="Entrar"/>
+        </div>
+    </form>
+</div>

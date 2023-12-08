@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ProjetoFinalLiriany.Models.TipoProcedimento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tipo do Procedimento</h1>
+
+<p>
+    <a asp-action="Create" class=" btn btn-primary">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoProcedimentoNome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoProcedimentoNome)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.TipoProcedimentoId" class=" btn btn-primary">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.TipoProcedimentoId" class=" btn btn-primary">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TipoProcedimentoId" class=" btn btn-secondary">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
